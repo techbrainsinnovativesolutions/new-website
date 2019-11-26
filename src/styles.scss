@@ -3,6 +3,18 @@
     font-family: muli-regular;
     src: url("assets/fonts/muli/Muli.ttf") format("truetype");
 }
+@font-face {
+    font-family: muli-bold;
+    src: url("assets/fonts/muli/Muli-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: muli-light;
+    src: url("assets/fonts/muli/Muli Light.ttf") format("truetype");
+}
 body{
     font-family: muli-regular;
+}
+.animated{
+    
+    animation-fill-mode: both;
 }

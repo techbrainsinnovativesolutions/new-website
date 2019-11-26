@@ -2,17 +2,12 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-12 pl-20 pr-20 commonStyle float-left header-panel">
         <div class="commonStyle float-left headerLeft-panel">
             <img src='assets/images/logo.png' class="companyLogo float-left" />
-            <h1 class="companyName float-left" >Header</h1>
+            <h1 class="companyName float-left" >Techbrains Innovative Solutions</h1>
             <!-- Techbrains Innovative solutions -->
         </div>
         <div class=" commonStyle float-right headerRight-panel">
             <ul class="menuList">
-                <li>About us</li>
-                <li>Services</li>
-                <li>Industries</li>
-                <li>technology</li>
-                <li>People</li>
-                <li>contact us</li>
+                <li *ngFor="let menuItem of menuList;let i=index" (click)="gotoContent(menuItem.name)">{{menuItem.name}}</li>
             </ul>
         </div>
     </div>
