@@ -1,0 +1,34 @@
+.companyLogo{
+    height:50px;
+    width: 60px;
+}
+.header-panel{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.headerLeft-panel{
+    display: inline-flex;
+    align-items: center;
+}
+.companyLogo{
+    width: 60px;
+    height: 50px;
+}
+.companyName{
+    font-size: 20px;
+    margin: 0px;
+}
+.menuList{
+    display: inline-block;
+    float: left;
+    width: auto;
+    position: relative;
+    margin: 0px;
+}
+.menuList li{
+    position: relative;
+    display: inline-block;
+    padding: 0px 20px;
+}

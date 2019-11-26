@@ -1,0 +1,28 @@
+<ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="[first, second, third]">
+	<div *nguCarouselDef="let item;" class="item">
+		<div class="tile">
+			<ng-container *ngTemplateOutlet="item"></ng-container>
+		</div>
+	</div>
+
+	<ng-template #first>
+		<div class="firstBanner-panel bannerItem">
+            <img src="assets/images/banner1.jpg" class="banner1Img"/>
+        </div>
+	</ng-template>
+
+	<ng-template #second>
+        <div class="secondBanner-panel bannerItem">
+            <img src="assets/images/banner2.jpg" class="banner2Img"/>
+        </div>
+	</ng-template>
+
+	<ng-template #third>
+        <div class="thirdBanner-panel bannerItem">
+            <img src="assets/images/banner3.jpg" class="banner3Img"/>
+        </div>
+	</ng-template>
+	<ul class="myPoint carouselPoints" NguCarouselPoint>
+        <li *ngFor="let j of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint" (click)="myCarousel.moveTo(j)"></li>
+    </ul>
+</ngu-carousel>

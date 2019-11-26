@@ -1,6 +1,15 @@
 /* media query for above 1366px css starts */
 @media screen and (min-width: 1367px) {
-    
+    .header-section,.aboutUs-section,.footer-section,.services-section,.industries-section{
+        max-width: 1366px !important;
+        display: block !important;
+        float: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .contentLayout-section{
+        margin-top:60px !important;
+    }
 }
 /* media query for above 1366px css ends */
 /* media query for ipad pro portrait mode css starts */
