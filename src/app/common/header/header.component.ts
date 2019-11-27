@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CommonService } from '../../shared/services/common.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public commonService:CommonService) { }
   menuList=[
     {name:"About Us"},
     {name:"Services"},
@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   }
 gotoContent(value){
 if(value=="About Us"){
-  
+  this.commonService.selectedMenuItem=value;
   window.scrollTo({
     top: 250,
     behavior: 'smooth',
@@ -28,13 +28,30 @@ if(value=="About Us"){
 }
 if(value=="Services"){
   window.scrollTo({
-    top: 600,
+    top: 700,
+    behavior: 'smooth',
+  })
+  this.commonService.selectedMenuItem=value;
+}
+if(value=="Industries"){
+  this.commonService.selectedMenuItem=value;
+  window.scrollTo({
+    top: 1380,
     behavior: 'smooth',
   })
 }
-if(value=="Industries"){
+
+if(value=="Team"){
+  this.commonService.selectedMenuItem=value;
   window.scrollTo({
-    top: 1300,
+    top: 2040,
+    behavior: 'smooth',
+  })
+}
+if(value=="Contact us"){
+  this.commonService.selectedMenuItem=value;
+  window.scrollTo({
+    top: 2470,
     behavior: 'smooth',
   })
 }

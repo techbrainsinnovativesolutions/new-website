@@ -7,5 +7,6 @@ export class CommonService {
   aboutusAnimation:boolean;
   servicesAnimation:boolean;
   industriesAnimation:boolean;
+  selectedMenuItem:string;
   constructor() { }
 }

@@ -7,7 +7,7 @@
         </div>
         <div class=" commonStyle float-right headerRight-panel">
             <ul class="menuList">
-                <li *ngFor="let menuItem of menuList;let i=index" (click)="gotoContent(menuItem.name)">{{menuItem.name}}</li>
+                <li *ngFor="let menuItem of menuList;let i=index" [ngClass]="{'activeMenu': commonService.selectedMenuItem==menuItem.name}" (click)="gotoContent(menuItem.name)">{{menuItem.name}}</li>
             </ul>
         </div>
     </div>
