@@ -1,0 +1,37 @@
+.teamDataItem-panel{
+    // border: 1px solid rgba(128, 128, 128, .4);
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, .4);
+}
+.teamDataItemPhoto-panel>img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(rgba(0, 0, 0, .8), transparent);
+}
+.teamCarouselPoints{
+    position: relative;
+    display: inline-flex;
+    float: left;
+    width: 100%;
+    padding: 20px 0px;
+    margin: 0px;
+    justify-content: center;
+}
+.teamCarouselPoints>li{
+    position: relative;
+    display: inline-block;
+    float: left;
+    background: grey;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.teamCarouselPoints li.active{
+    background: rgba(50, 87, 222, 0.8);
+}

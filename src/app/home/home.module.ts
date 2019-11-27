@@ -12,12 +12,16 @@ import { SampleComponent } from './components/sample/sample.component';
 import { TechnologyExpertiseComponent } from './components/technology-expertise/technology-expertise.component';
 import { TeamComponent } from './components/team/team.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [DashboardComponent, CarouselComponent, AboutUsComponent, ServicesComponent, IndustriesComponent, SampleComponent, TechnologyExpertiseComponent, TeamComponent, ContactUsComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    NguCarouselModule
+    NguCarouselModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCFdcs2Hh_Eg2jgjpFZ1jK8EQTxiYKuh00'
+    })
   ]
 })
 export class HomeModule { }

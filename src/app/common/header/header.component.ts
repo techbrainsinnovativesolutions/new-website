@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
     {name:"Services"},
     {name:"Industries"},
     {name:"Technology"},
-    {name:"People"},
+    {name:"Team"},
     {name:"Contact us"}
   ]
   ngOnInit() {
