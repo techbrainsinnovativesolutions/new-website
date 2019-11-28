@@ -26,9 +26,9 @@
     cursor: pointer;
 }
 .carouselPoints li:hover{
-    background: white;
-    box-shadow: 0px 0px 10px 0px grey;
+    background: #1831ab;
+    // box-shadow: 0px 0px 10px 0px grey;
 }
 .carouselPoints li.active{
-    background:grey;
+    background:#1831ab;
 }

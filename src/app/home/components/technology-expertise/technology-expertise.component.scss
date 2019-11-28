@@ -1,0 +1,20 @@
+.expertise-section{
+    // background: linear-gradient(-90deg, rgba(0, 8, 150, .8), rgba(58, 63, 226, 0.8));
+    // min-height: 500px;
+    // color: white;
+    background: linear-gradient(to left, rgb(7, 52, 86), rgba(0, 87, 154, 0.8));
+    // backdrop-filter: opacity(.2);
+    min-height: 500px;
+    color: white;
+}
+.expertiseItem-panel{
+    display: inline-flex;
+    justify-content: center;
+    flex-flow: column;
+    // border: 1px solid white;
+    border-radius: 10px;
+}
+.exterpertiseImage{
+    width: 100px;
+    // animation: heartBeat 5s infinite linear;
+}

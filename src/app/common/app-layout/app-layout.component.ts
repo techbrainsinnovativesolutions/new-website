@@ -31,10 +31,13 @@ export class AppLayoutComponent implements OnInit {
         this.commonService.industriesAnimation=true;
         this.commonService.selectedMenuItem="Industries";
       }
-      if(window.scrollY>2040){
+      if(window.scrollY>2010){
+        this.commonService.selectedMenuItem="Technology";
+      }
+      if(window.scrollY>2580){
         this.commonService.selectedMenuItem="Team";
       }
-      if(window.scrollY>2470){
+      if(window.scrollY>2990){
         this.commonService.selectedMenuItem="Contact us";
       }
       

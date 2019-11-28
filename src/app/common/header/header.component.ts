@@ -40,18 +40,24 @@ if(value=="Industries"){
     behavior: 'smooth',
   })
 }
-
+if(value=="Technology"){
+  this.commonService.selectedMenuItem=value;
+  window.scrollTo({
+    top: 2020,
+    behavior: 'smooth',
+  })
+}
 if(value=="Team"){
   this.commonService.selectedMenuItem=value;
   window.scrollTo({
-    top: 2040,
+    top: 2580,
     behavior: 'smooth',
   })
 }
 if(value=="Contact us"){
   this.commonService.selectedMenuItem=value;
   window.scrollTo({
-    top: 2470,
+    top: 2990,
     behavior: 'smooth',
   })
 }

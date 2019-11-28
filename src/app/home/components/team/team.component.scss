@@ -31,6 +31,10 @@
     height: 10px;
     border-radius: 50%;
     margin-right: 10px;
+    cursor: pointer;
+}
+.teamCarouselPoints>li:hover{
+    background: rgba(50, 87, 222, 0.8);
 }
 .teamCarouselPoints li.active{
     background: rgba(50, 87, 222, 0.8);
