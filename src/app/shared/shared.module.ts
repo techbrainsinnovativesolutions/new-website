@@ -9,6 +9,6 @@ import { CommonService } from './services/common.service';
     CommonModule
   ],
   exports:[CommonService],
-  providers: [CommonService]
+  providers: []
 })
 export class SharedModule { }
