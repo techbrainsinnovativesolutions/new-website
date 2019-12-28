@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HostListener } from '@angular/core'
+import { HostListener, Inject } from '@angular/core'
 import { CommonService } from '../../shared/services/common.service';
+import { WINDOW } from '@ng-toolkit/universal';
 @Component({
   selector: 'app-app-layout',
   templateUrl: './app-layout.component.html',
@@ -11,43 +12,43 @@ export class AppLayoutComponent implements OnInit {
   showTopArrow:boolean;
   @HostListener('window:scroll', ['$event'])
     onWindowScroll($event) {
-      if(window.scrollY<100){
+      if(this.window.scrollY<100){
         this.commonService.aboutusAnimation=false;
         this.commonService.servicesAnimation=false;
         this.commonService.industriesAnimation=false;
         this.showTopArrow=false;
         this.commonService.selectedMenuItem="";
       }
-      if(window.scrollY>200){
+      if(this.window.scrollY>200){
         this.showTopArrow=true;
         this.commonService.aboutusAnimation=true;
         this.commonService.selectedMenuItem="About Us";
       }
-      if(window.scrollY>500){
+      if(this.window.scrollY>500){
         this.commonService.servicesAnimation=true;
         this.commonService.selectedMenuItem="Services";
       }
-      if(window.scrollY>1100){
+      if(this.window.scrollY>1100){
         this.commonService.industriesAnimation=true;
         this.commonService.selectedMenuItem="Industries";
       }
-      if(window.scrollY>2010){
+      if(this.window.scrollY>2010){
         this.commonService.selectedMenuItem="Technology";
       }
-      if(window.scrollY>2580){
+      if(this.window.scrollY>2580){
         this.commonService.selectedMenuItem="Team";
       }
-      if(window.scrollY>2990){
+      if(this.window.scrollY>2990){
         this.commonService.selectedMenuItem="Contact us";
       }
       
       
         console.log("scrolling...");
     }
-  constructor(public commonService:CommonService) { }
+  constructor(@Inject(WINDOW) private window: Window, public commonService:CommonService) { }
   gotop(){
     this.commonService.selectedMenuItem="";
-    window.scrollTo({
+    this.window.scrollTo({
       top: 0,
       behavior: 'smooth',
     })

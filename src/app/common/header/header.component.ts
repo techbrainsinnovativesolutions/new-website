@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { CommonService } from '../../shared/services/common.service';
+import { WINDOW } from '@ng-toolkit/universal';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,7 +8,7 @@ import { CommonService } from '../../shared/services/common.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public commonService:CommonService) { }
+  constructor(@Inject(WINDOW) private window: Window, public commonService:CommonService) { }
   menuList=[
     {name:"About Us"},
     {name:"Services"},
@@ -21,13 +22,13 @@ export class HeaderComponent implements OnInit {
 gotoContent(value){
 if(value=="About Us"){
   this.commonService.selectedMenuItem=value;
-  window.scrollTo({
+  this.window.scrollTo({
     top: 250,
     behavior: 'smooth',
   })
 }
 if(value=="Services"){
-  window.scrollTo({
+  this.window.scrollTo({
     top: 700,
     behavior: 'smooth',
   })
@@ -35,28 +36,28 @@ if(value=="Services"){
 }
 if(value=="Industries"){
   this.commonService.selectedMenuItem=value;
-  window.scrollTo({
+  this.window.scrollTo({
     top: 1380,
     behavior: 'smooth',
   })
 }
 if(value=="Technology"){
   this.commonService.selectedMenuItem=value;
-  window.scrollTo({
+  this.window.scrollTo({
     top: 2020,
     behavior: 'smooth',
   })
 }
 if(value=="Team"){
   this.commonService.selectedMenuItem=value;
-  window.scrollTo({
+  this.window.scrollTo({
     top: 2580,
     behavior: 'smooth',
   })
 }
 if(value=="Contact us"){
   this.commonService.selectedMenuItem=value;
-  window.scrollTo({
+  this.window.scrollTo({
     top: 2990,
     behavior: 'smooth',
   })
