@@ -31,25 +31,31 @@ export class TeamComponent implements OnInit {
     {
       photoPath:'assets/images/male.png',
       name:'RaviTeja',
-      designation:'designation',
+      designation:'CEO',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
     {
       photoPath:'assets/images/male.png',
       name:'Gopi',
-      designation:'designation',
+      designation:'COO',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
     {
       photoPath:'assets/images/female.png',
       name:'Rama',
-      designation:'designation',
+      designation:'Human Resource Mangager',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
     {
       photoPath:'assets/images/female.png',
-      name:'lakshmi',
-      designation:'designation',
+      name:'Lakshmi',
+      designation:'Human Resource Mangager',
+      description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
+    },
+    {
+      photoPath:'assets/images/male.png',
+      name:'Charanteja',
+      designation:'CTO',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
     {
