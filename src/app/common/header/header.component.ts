@@ -9,6 +9,7 @@ import { WINDOW } from '@ng-toolkit/universal';
 export class HeaderComponent implements OnInit {
 
   constructor(@Inject(WINDOW) private window: Window, public commonService:CommonService) { }
+  openmenu :boolean;
   menuList=[
     {name:"About Us"},
     {name:"Services"},
@@ -18,6 +19,9 @@ export class HeaderComponent implements OnInit {
     {name:"Contact us"}
   ]
   ngOnInit() {
+  }
+  openMenu() {
+    this.openmenu = !this.openmenu;
   }
 gotoContent(value){
 if(value=="About Us"){

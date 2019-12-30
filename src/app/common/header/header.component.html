@@ -6,9 +6,20 @@
             <!-- Techbrains Innovative solutions -->
         </div>
         <div class=" commonStyle float-right headerRight-panel">
-            <ul class="menuList">
+            <ul class="menuList headings" >
                 <li *ngFor="let menuItem of menuList;let i=index" [ngClass]="{'activeMenu': commonService.selectedMenuItem==menuItem.name}" (click)="gotoContent(menuItem.name)">{{menuItem.name}}</li>
             </ul>
+            <div class="menuList mobilemenu pr-10 f-24" (click)="openMenu()">
+                <span><i class="fas fa-bars"></i></span>
+            </div>
         </div>
     </div>
+</div>
+
+
+<!-- <div class="overlay" *ngIf="openmenu" (click)="openMenu()"></div> -->
+<div class="mobphne" *ngIf="openmenu">
+        <ul class="m-0 p-0 commonStyle float-left menuList w-100">
+         <li *ngFor="let menuItem of menuList;let i=index" class="f-20 w-100" [ngClass]="{'activeMenu': commonService.selectedMenuItem==menuItem.name}" (click)="gotoContent(menuItem.name)">{{menuItem.name}}</li>
+        </ul>
 </div>

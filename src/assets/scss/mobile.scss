@@ -24,7 +24,15 @@
 /* media query for ipad landscape mode css ends */
 /* media query for ipad portrait mode css starts */
 @media screen and (max-width: 1023px) {
-   
+    .mobilemenu{
+        display: block !important;
+    }
+    .headings{
+        display: none !important;
+    }
+    .upArrowBtn {
+        right: 5px !important;
+    }
 }
 /* media query for ipad portrait mode css ends */
 /* media query for mobile devices css starts */
