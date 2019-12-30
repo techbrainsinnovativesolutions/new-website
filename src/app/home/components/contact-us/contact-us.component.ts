@@ -15,8 +15,8 @@ export class ContactUsComponent implements OnInit {
   zoom: number=15;
   
   // initial center position for the map
-  lat: number = 14.442599;
-  lng: number = 79.986458;
+  lat: number = 14.4129962;
+  lng: number = 79.9327556;
 
   clickedMarker(label: string, index: number) {
     console.log(`clicked the marker: ${label || index}`)
@@ -36,8 +36,8 @@ export class ContactUsComponent implements OnInit {
   
   markers: marker[] = [
 	  {
-		  lat: 14.442599,
-		  lng: 79.986458,
+		  lat: 14.4129962,
+		  lng: 79.9327556,
 		  label: 'assets/images/logo.png',
 		  draggable: false
 	  }

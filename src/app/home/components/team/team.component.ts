@@ -29,47 +29,55 @@ export class TeamComponent implements OnInit {
   carouselItems = [1, 2, 3,4,5];
   teamList=[
     {
-      photoPath:'assets/images/male.png',
+      photoPath:'assets/icons/businessman.png',
       name:'RaviTeja',
-      designation:'CEO',
+      designation:'Founder & CEO',
+      description:'Raviteja has 5 years Experienced in Information and Technologies,His expertise and interests are in the areas of design and development of scalable applications ,knowledge engineering, data integrations and Artificial Intelligence',
+    },
+    {
+      photoPath:'assets/icons/businessman.png',
+      name:'Gopinath',
+      designation:'Chief Operating Officer',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
     {
-      photoPath:'assets/images/male.png',
-      name:'Gopi',
-      designation:'COO',
+      photoPath:'assets/icons/businesswoman.png',
+      name:'Ramadevi',
+      designation:'Human Resource Manager',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
     {
-      photoPath:'assets/images/female.png',
-      name:'Rama',
-      designation:'Human Resource Mangager',
-      description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
-    },
-    {
-      photoPath:'assets/images/female.png',
+      photoPath:'assets/icons/businesswoman.png',
       name:'Lakshmi',
-      designation:'Human Resource Mangager',
+      designation:'',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
     {
-      photoPath:'assets/images/male.png',
+      photoPath:'assets/icons/businessman.png',
+      name:'Omsai',
+      designation:'Security Manager',
+      description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
+    },
+    {
+      photoPath:'assets/icons/businessman.png',
       name:'Charanteja',
-      designation:'CTO',
+      designation:'Chief Technology Officer',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
+
     {
-      photoPath:'assets/images/male.png',
+      photoPath:'assets/icons/businessman.png',
       name:'Girikumar',
-      designation:'CTO',
+      designation:'Lead Developer',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
     {
-      photoPath:'assets/images/male.png',
+      photoPath:'assets/icons/businessman.png',
       name:'Srikanth',
-      designation:'designation',
+      designation:'Marketing Manager',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
-    }
+    },
+    
   ]
 
   constructor(private cdr: ChangeDetectorRef) {}
