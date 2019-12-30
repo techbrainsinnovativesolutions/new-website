@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
+import {APP_BASE_HREF} from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { NgtUniversalModule } from '@ng-toolkit/universal';
     HttpClientModule,
     NgtUniversalModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
