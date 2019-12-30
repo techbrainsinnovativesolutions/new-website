@@ -35,10 +35,10 @@ export class AppLayoutComponent implements OnInit {
       if(this.window.scrollY>2010){
         this.commonService.selectedMenuItem="Technology";
       }
-      if(this.window.scrollY>2580){
+      if(this.window.scrollY>2579){
         this.commonService.selectedMenuItem="Team";
       }
-      if(this.window.scrollY>2990){
+      if(this.window.scrollY>2989){
         this.commonService.selectedMenuItem="Contact us";
       }
       
