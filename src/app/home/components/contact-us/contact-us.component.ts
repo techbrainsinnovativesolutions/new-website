@@ -42,6 +42,10 @@ export class ContactUsComponent implements OnInit {
 		  draggable: false
 	  }
   ]
+
+  whatsup(){
+    window.location.href="https://api.whatsapp.com/send?phone=919967519024&source=&data="
+  }
 }
 
 // just an interface for type safety.
