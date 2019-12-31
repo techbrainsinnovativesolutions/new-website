@@ -37,7 +37,19 @@
 /* media query for ipad portrait mode css ends */
 /* media query for mobile devices css starts */
 @media screen and (max-width: 767px) {
-    
+    .bannerItem{
+        height:370px !important;
+    }
+    .footerLayout-section{
+        height:80px !important;
+    }
+    .footer-panel{
+        height:80px !important;
+        line-height: unset !important;
+    }
+    .footer-panel p{
+        margin:0px !important;
+    }
 }
 /* media query for mobile devices css ends */
 /* media query for extra small devices css starts */
