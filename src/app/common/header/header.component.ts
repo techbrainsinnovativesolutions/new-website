@@ -25,6 +25,7 @@ export class HeaderComponent implements OnInit {
   }
 gotoContent(value){
 if(value=="About Us"){
+  this.openMenu();
   this.commonService.selectedMenuItem=value;
   this.window.scrollTo({
     top: 250,
@@ -32,6 +33,7 @@ if(value=="About Us"){
   })
 }
 if(value=="Services"){
+  this.openMenu();
   this.window.scrollTo({
     top: 700,
     behavior: 'smooth',
@@ -39,6 +41,7 @@ if(value=="Services"){
   this.commonService.selectedMenuItem=value;
 }
 if(value=="Industries"){
+  this.openMenu();
   this.commonService.selectedMenuItem=value;
   this.window.scrollTo({
     top: 1380,
@@ -46,6 +49,7 @@ if(value=="Industries"){
   })
 }
 if(value=="Technology"){
+  this.openMenu();
   this.commonService.selectedMenuItem=value;
   this.window.scrollTo({
     top: 2020,
@@ -53,6 +57,7 @@ if(value=="Technology"){
   })
 }
 if(value=="Team"){
+  this.openMenu();
   this.commonService.selectedMenuItem=value;
   this.window.scrollTo({
     top: 2580,
@@ -60,6 +65,7 @@ if(value=="Team"){
   })
 }
 if(value=="Contact us"){
+  this.openMenu();
   this.commonService.selectedMenuItem=value;
   this.window.scrollTo({
     top: 2990,
