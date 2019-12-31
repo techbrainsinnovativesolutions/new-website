@@ -71,11 +71,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "techBrainsInnovative:build"
+            "browserTarget": "techBrainsInnovative:build",
+            "proxyConfig": "src/proxy.js"
           },
           "configurations": {
             "production": {
-              "browserTarget": "techBrainsInnovative:build:production"
+              "browserTarget": "techBrainsInnovative:build:production",
             }
           }
         },
