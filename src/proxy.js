@@ -1,7 +1,7 @@
 var HttpsProxyAgent = require('https-proxy-agent');
 var proxyConfig = [{
   context: '',
-  target: 'http://www.techbrainsinnovative.com',
+  target: 'https://www.techbrainsinnovative.com',
   secure: false
 }];
 
