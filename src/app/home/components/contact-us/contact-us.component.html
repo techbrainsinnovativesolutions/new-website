@@ -6,7 +6,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-12 pl-0 pr-0 commonStyle float-left contactData-section mt-20">
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 pl-0 pr-20 commonStyle float-left contactLeftData-section">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12 pl-0 pr-0 commonStyle float-left contactLeftMap-section">
-                    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" (mapClick)="mapClicked($event)">
+                    <!-- <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" (mapClick)="mapClicked($event)">
                         <agm-marker 
                             *ngFor="let m of markers; let i = index"
                             (markerClick)="clickedMarker(m.label, i)"
@@ -21,7 +21,8 @@
                             </strong>
                           </agm-info-window>
                         </agm-marker>
-                      </agm-map>
+                      </agm-map> -->
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15456.657113597472!2d79.9328117!3d14.4176917!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2389d4041489b6cf!2sTechbrains%20Innovative%20Solutions!5e0!3m2!1sen!2sin!4v1582024267999!5m2!1sen!2sin" class="iframeWidth" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 pl-0 pr-0 commonStyle float-left contactRightData-section">

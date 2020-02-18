@@ -41,9 +41,6 @@ export class AppLayoutComponent implements OnInit {
       if(this.window.scrollY>2989){
         this.commonService.selectedMenuItem="Contact us";
       }
-      
-      
-        console.log("scrolling...");
     }
   constructor(@Inject(WINDOW) private window: Window, public commonService:CommonService) { }
   gotop(){

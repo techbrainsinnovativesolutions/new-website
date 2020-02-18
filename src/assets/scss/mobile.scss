@@ -10,6 +10,9 @@
     .contentLayout-section{
         margin-top:60px !important;
     }
+    .bannerItem{
+        height:685px !important;
+    }
 }
 /* media query for above 1366px css ends */
 /* media query for ipad pro portrait mode css starts */
@@ -37,8 +40,13 @@
 /* media query for ipad portrait mode css ends */
 /* media query for mobile devices css starts */
 @media screen and (max-width: 767px) {
+    .iframeWidth{
+        width: 100% !important;
+       height:315px !important;
+       margin-bottom:15px !important;
+    }
     .bannerItem{
-        height:370px !important;
+        height:186px !important;
     }
     .footerLayout-section{
         height:80px !important;
@@ -54,6 +62,13 @@
 /* media query for mobile devices css ends */
 /* media query for extra small devices css starts */
 @media screen and (max-width: 320px) {
-   
+    .iframeWidth{
+        width: 100% !important;
+       height:315px !important;
+       margin-bottom:15px !important;
+    }
+    .bannerItem{
+        height:186px !important;
+    }
 }
 /* media query for extra small devices css ends */
