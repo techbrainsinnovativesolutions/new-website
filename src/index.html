@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
   <title>TechBrainsInnovative</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,5 +10,24 @@
 </head>
 <body>
   <app-root></app-root>
+  <script>
+    crossOrginIssues('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
+     crossOrginIssues('https://fonts.googleapis.com/css?family=Muli:400,700');
+    
+
+    function crossOriginIssues(urlparam){
+      var xhr = new XMLHttpRequest();
+    var url = urlparam;
+    xhr.open("GET", url);
+    xhr.onreadystatechange = function() {
+
+        if (xhr.status === 200 && xhr.readyState === 4) {
+
+            document.querySelector("body").innerHTML = xhr.responseText
+        }
+    }
+    xhr.send();
+    }
+</script>
 </body>
 </html>
