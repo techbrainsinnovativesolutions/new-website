@@ -14,24 +14,50 @@
 </head>
 <body>
   <app-root></app-root>
-<!--   <script>
-    crossOrginIssues('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
-     crossOrginIssues('https://fonts.googleapis.com/css?family=Muli:400,700');
-    
+  <script>
+    window.onload = function(){
+      corsval('https://fonts.googleapis.com/css?family=Muli:400,700');
+      corsval('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
+};
 
-    function crossOriginIssues(urlparam){
-      var xhr = new XMLHttpRequest();
-    var url = urlparam;
-    xhr.open("GET", url);
-    xhr.onreadystatechange = function() {
+var appendCSS = function(css){
+    var s = document.createElement('STYLE');
+    s.setAttribute('type', 'text/css');
+    if(s.styleSheet)  // IE
+        s.styleSheet.cssText = css;
+    else  // the rest of the world
+        s.appendChild(document.createTextNode(css));
+    document.getElementsByTagName('HEAD')[0].appendChild(s);
+};
 
-        if (xhr.status === 200 && xhr.readyState === 4) {
-
-            document.querySelector("body").innerHTML = xhr.responseText
-        }
+var CORSRequest = function(method, url){
+    var xhr = new XMLHttpRequest();
+    if("withCredentials" in xhr){  // Chrome, Firefox, Opera, Safari
+        xhr.open(method, url, true);
+    }else if(typeof XDomainRequest != "undefined"){  // IE
+        xhr = new XDomainRequest();
+        xhr.open(method, url);
+    }else{ // CORS isn't supported
+        xhr = null;
     }
+    return xhr;
+};
+   function corsval(urlval){
+    var xhr = CORSRequest("GET", urlval);
+    if (!xhr){ // if CORS isn't supported
+        alert("Still using Lynx?");
+        return;
+    }
+    xhr.onload = function() {
+        var response = xhr.responseText;
+        appendCSS(response);
+    }
+    xhr.onerror = function() {
+        alert('Something went wrong!');
+    };
     xhr.send();
-    }
-</script> -->
+   }
+</script>
+
 </body>
 </html>
