@@ -28,15 +28,11 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/font-awesome/css/font-awesome.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/scss/animate.css",
               "src/styles.scss",
               "src/assets/scss/common.scss",
-              "src/assets/scss/mobile.scss",
-              "src/assets/fonts/muli/Muli.ttf",
-              "src/assets/fonts/muli/Muli-Bold.ttf",
-              "src/assets/fonts/muli/Muli Light.ttf"
+              "src/assets/scss/mobile.scss"
             ],
             "scripts": []
           },
