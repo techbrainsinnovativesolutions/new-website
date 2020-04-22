@@ -36,9 +36,9 @@ export class TeamComponent implements OnInit {
     },
     {
       photoPath:'assets/icons/businessman.png',
-      name:'Gopinath',
+      name:'Narayana',
       designation:'Chief Operating Officer',
-      description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
+      description:'Narayana has 5 years Experienced in Information and Technologies,His expertise and interests are in the areas of design and development of scalable applications ,knowledge engineering, data integrations and Artificial Intelligence'
     },
     {
       photoPath:'assets/icons/businesswoman.png',
@@ -54,8 +54,8 @@ export class TeamComponent implements OnInit {
     },
     {
       photoPath:'assets/icons/businessman.png',
-      name:'Omsai',
-      designation:'Security Manager',
+      name:'Srikanth',
+      designation:'Chief Marketing Officer',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
     {
@@ -64,19 +64,19 @@ export class TeamComponent implements OnInit {
       designation:'Chief Technology Officer',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
-
+    {
+      photoPath:'assets/icons/businessman.png',
+      name:'Omsai',
+      designation:'Cheif Security Officer',
+      description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
+    },
     {
       photoPath:'assets/icons/businessman.png',
       name:'Girikumar',
-      designation:'Lead Developer',
+      designation:'Developer',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
-    {
-      photoPath:'assets/icons/businessman.png',
-      name:'Srikanth',
-      designation:'Marketing Manager',
-      description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
-    },
+    
     
   ]
 

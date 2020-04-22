@@ -7,57 +7,10 @@
   <base href="/">
  <link rel = "stylesheet" type = "text/css"
    href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"  crossorigin="anonymous"/>
-  <link rel = "stylesheet" type = "text/css"
-   href = "https://fonts.googleapis.com/css?family=Muli:400,700"  crossorigin="anonymous"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/images/logo.png">  
 </head>
 <body>
   <app-root></app-root>
-  <!-- <script>
-    window.onload = function(){
-      corsval('https://fonts.googleapis.com/css?family=Muli:400,700');
-      corsval('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
-};
-
-var appendCSS = function(css){
-    var s = document.createElement('STYLE');
-    s.setAttribute('type', 'text/css');
-    if(s.styleSheet)  // IE
-        s.styleSheet.cssText = css;
-    else  // the rest of the world
-        s.appendChild(document.createTextNode(css));
-    document.getElementsByTagName('HEAD')[0].appendChild(s);
-};
-
-var CORSRequest = function(method, url){
-    var xhr = new XMLHttpRequest();
-    if("withCredentials" in xhr){  // Chrome, Firefox, Opera, Safari
-        xhr.open(method, url, true);
-    }else if(typeof XDomainRequest != "undefined"){  // IE
-        xhr = new XDomainRequest();
-        xhr.open(method, url);
-    }else{ // CORS isn't supported
-        xhr = null;
-    }
-    return xhr;
-};
-   function corsval(urlval){
-    var xhr = CORSRequest("GET", urlval);
-    if (!xhr){ // if CORS isn't supported
-        alert("Still using Lynx?");
-        return;
-    }
-    xhr.onload = function() {
-        var response = xhr.responseText;
-        appendCSS(response);
-    }
-    xhr.onerror = function() {
-        alert('Something went wrong!');
-    };
-    xhr.send();
-   }
-</script> -->
-
 </body>
 </html>
