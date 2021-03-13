@@ -42,12 +42,6 @@ export class TeamComponent implements OnInit {
     },
     {
       photoPath:'assets/icons/businesswoman.png',
-      name:'Ramadevi',
-      designation:'Human Resource Manager',
-      description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
-    },
-    {
-      photoPath:'assets/icons/businesswoman.png',
       name:'Lakshmi',
       designation:'Lead Developer',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
@@ -69,13 +63,7 @@ export class TeamComponent implements OnInit {
       name:'Omsai',
       designation:'Cheif Security Officer',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
-    },
-    {
-      photoPath:'assets/icons/businessman.png',
-      name:'Girikumar',
-      designation:'Developer',
-      description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
-    },
+    }
     
     
   ]
