@@ -9,7 +9,7 @@ import { NguCarousel, NguCarouselConfig } from '@ngu/carousel';
 export class CarouselComponent implements OnInit {
   // @ViewChild("myCarousel") myCarousel: NguCarousel<any>;
   
-  @ViewChild('myCarousel', {static: false}) myCarousel: NguCarousel<any>;
+  @ViewChild('myCarousel') myCarousel: NguCarousel<any>;
   ngOnInit() {
     
   }

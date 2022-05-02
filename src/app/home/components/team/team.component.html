@@ -20,7 +20,7 @@
                 <!-- <button NguCarouselNext class="rightRs">></button>
                 <button NguCarouselPrev class="leftRs"><</button> -->
                 <ul class="teamCarouselPoints" NguCarouselPoint>
-                    <li *ngFor="let j of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint" (click)="myCarousel.moveTo(j)"></li>
+                    <li *ngFor="let j of myCarousel.pointNumbers; let k = index" [class.active]="k==myCarousel.activePoint" (click)="myCarousel.moveTo(k)"></li>
                 </ul>
             </ngu-carousel>
         </div>
