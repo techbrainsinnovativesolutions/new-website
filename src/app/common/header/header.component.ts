@@ -29,13 +29,15 @@ if(value=="About Us"){
   this.window.scrollTo({
     top: 250,
     behavior: 'smooth',
-  })
+  });
+  this.openmenu = false;
 }
 if(value=="Services"){
   this.window.scrollTo({
     top: 700,
     behavior: 'smooth',
-  })
+  });
+  this.openmenu = false;
   this.commonService.selectedMenuItem=value;
 }
 if(value=="Industries"){
@@ -43,7 +45,8 @@ if(value=="Industries"){
   this.window.scrollTo({
     top: 1380,
     behavior: 'smooth',
-  })
+  });
+  this.openmenu = false;
 }
 if(value=="Technology"){
   this.commonService.selectedMenuItem=value;
@@ -51,6 +54,7 @@ if(value=="Technology"){
     top: 2020,
     behavior: 'smooth',
   })
+  this.openmenu = false;
 }
 if(value=="Team"){
   this.commonService.selectedMenuItem=value;
@@ -58,6 +62,7 @@ if(value=="Team"){
     top: 2580,
     behavior: 'smooth',
   })
+  this.openmenu = false;
 }
 if(value=="Contact us"){
   this.commonService.selectedMenuItem=value;
@@ -65,6 +70,7 @@ if(value=="Contact us"){
     top: 2990,
     behavior: 'smooth',
   })
+  this.openmenu = false;
 }
 }
 }

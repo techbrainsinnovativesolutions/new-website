@@ -11,7 +11,9 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 import {APP_BASE_HREF} from '@angular/common';
-
+// import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+// import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import {APP_BASE_HREF} from '@angular/common';
     CommonModule,
     TransferHttpCacheModule,
     HttpClientModule,
-    NgtUniversalModule
+    NgtUniversalModule,
+    // provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    // provideFirestore(() => getFirestore()),
   ],
   providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
