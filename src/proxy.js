@@ -1,8 +1,9 @@
 var HttpsProxyAgent = require('https-proxy-agent');
 var proxyConfig = [{
-  context: '',
-  target: 'http://www.techbrainsinnovative.com',
-  secure: false
+  context: ['/api', '/upload'],
+  target: 'https://www.techbrainsinnovative.com',
+  secure: false,
+  logLevel: 'debug'
 }];
 
 function setupForCorporateProxy(proxyConfig) {
