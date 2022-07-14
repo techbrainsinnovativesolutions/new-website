@@ -986,11 +986,13 @@ a.play-video::after {
     font-size: 22px;
     font-weight: 700;
     line-height: 1.2;
+    text-align: center;
     padding: 20px 20px 35px
 }
 
 .title-serv-c span {
-    display: block
+    display: block;
+    text-align: center;
 }
 
 .card-bg-a {
@@ -1080,7 +1082,7 @@ a.play-video::after {
     line-height: 56px;
     text-align: center;
     outline: 0;
-    color: #fff;
+    color: #fff !important;
     background-color: #ff1f8e;
     border: none;
     -webkit-border-radius: 100px;
@@ -2006,11 +2008,13 @@ a.play-video::after {
 }
 
 .form-block button:hover {
-    background-color: #ff1f8e
+    background-color: #ff1f8e;
+    border-radius: 30px;
 }
 
 .form-block button {
-    width: 100%
+    width: 100%;
+    border-radius: 30px;
 }
 
 .our-office {
@@ -2110,7 +2114,8 @@ a.play-video::after {
 }
 
 #scrollUp:hover {
-    opacity: 1
+    opacity: 1;
+    visibility: hidden;
 }
 
 #scrollUp {
@@ -2126,7 +2131,8 @@ a.play-video::after {
     background-repeat: no-repeat;
     background-size: 15px;
     background-position: center center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    visibility: hidden;
 }
 
 footer {
@@ -8382,7 +8388,7 @@ a {
     display: inline-block;
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    color: #fff !important;
     cursor: pointer;
     padding: 0 32px;
     line-height: 56px;
