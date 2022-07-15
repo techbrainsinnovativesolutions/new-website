@@ -72,4 +72,7 @@ export class TechnologyExpertiseComponent implements OnInit {
     
     
   ]
+  whatsup(){
+    window.location.href="https://api.whatsapp.com/send?phone=918618309754&source=&data="
+  }
 }
