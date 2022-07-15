@@ -109,7 +109,7 @@ button:focus {
     padding: 0;
     text-align: center;
     position: relative;
-    z-index: 10
+    /* z-index: 10 */
 }
 
 .common-heading h2 {
@@ -4337,7 +4337,7 @@ p.video-lab-- {
     padding: 0;
     text-align: center;
     position: relative;
-    z-index: 10
+    /* z-index: 10 */
 }
 
 .common-heading-2 h2 {
