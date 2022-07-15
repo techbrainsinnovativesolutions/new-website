@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
     this.metaTagService.addTags([
-      { name: 'keywords', content: 'Techbrains Innovative Solutions, Techbrains, Techbrains Innovative ,Inovotive,Software services, software developent,Application development,IOT Devices development' },
+      { name: 'keywords', content: 'Javascript,Java, Html5,css3,bootstrap,Angular,Planning,Innovation,Collaboration,Problem solving,web development,website builder,website design,web de, Techbrains Innovative Solutions, Techbrains, Techbrains Innovative ,Inovotive,Software services, software developent,Application development,IOT Devices development' },
       { name: 'robots', content: 'index, follow' },
       { name: 'author', content: 'Techbrains Innovative Solutions Team' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
