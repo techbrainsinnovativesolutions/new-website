@@ -19,12 +19,12 @@ export class AppLayoutComponent implements OnInit {
         this.showTopArrow=false;
         this.commonService.selectedMenuItem="";
       }
-      if(this.window.scrollY>200){
+      if(this.window.scrollY>500){
         this.showTopArrow=true;
         this.commonService.aboutusAnimation=true;
         this.commonService.selectedMenuItem="About Us";
       }
-      if(this.window.scrollY>500){
+      if(this.window.scrollY>1200){
         this.commonService.servicesAnimation=true;
         this.commonService.selectedMenuItem="Services";
       }

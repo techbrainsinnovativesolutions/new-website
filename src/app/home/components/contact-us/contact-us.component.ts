@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MouseEvent } from '@agm/core';
-
+import {PhpmailerService } from '../../../shared/services/phpmailer.service'
+import { error } from '@angular/compiler/src/util';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -8,7 +9,7 @@ import { MouseEvent } from '@agm/core';
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mailService:PhpmailerService) { }
 
   ngOnInit() {
   }
@@ -45,6 +46,14 @@ export class ContactUsComponent implements OnInit {
 
   whatsup(){
     window.location.href="https://api.whatsapp.com/send?phone=919967519024&source=&data="
+  }
+
+  emailSender(){
+    this.mailService.maildata('raviteja.m6666@gmail.com').subscribe(response=>{
+      console.log(response);
+    },error=>{
+     console.log(error);
+    });
   }
 }
 
