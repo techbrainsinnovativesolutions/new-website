@@ -27,44 +27,46 @@ gotoContent(value){
 if(value=="About Us"){
   this.commonService.selectedMenuItem=value;
   this.window.scrollTo({
+    top: 250,
     behavior: 'smooth',
-  });
-  this.openmenu = false;
+  })
 }
 if(value=="Services"){
+  this.commonService.selectedMenuItem=value;
   this.window.scrollTo({
+    top: 700,
     behavior: 'smooth',
   });
-  this.openmenu = false;
-  this.commonService.selectedMenuItem=value;
 }
+  
+  
 if(value=="Industries"){
   this.commonService.selectedMenuItem=value;
   this.window.scrollTo({
+    top: 1380,
     behavior: 'smooth',
-  });
-  this.openmenu = false;
+  })
 }
 if(value=="Technology"){
   this.commonService.selectedMenuItem=value;
   this.window.scrollTo({
+    top: 2020,
     behavior: 'smooth',
   })
-  this.openmenu = false;
 }
 if(value=="Team"){
   this.commonService.selectedMenuItem=value;
   this.window.scrollTo({
+    top: 2580,
     behavior: 'smooth',
   })
-  this.openmenu = false;
 }
 if(value=="Contact us"){
   this.commonService.selectedMenuItem=value;
   this.window.scrollTo({
+    top: 2990,
     behavior: 'smooth',
   })
-  this.openmenu = false;
 }
 }
 }

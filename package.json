@@ -35,7 +35,7 @@
     "@nguniversal/common": "8.1.0",
     "@nguniversal/express-engine": "v8.2.6",
     "@nguniversal/module-map-ngfactory-loader": "v8.2.6",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.6.2",
     "domino": "^2.1.3",
     "express": "^4.15.2",
     "firebase": "^9.9.0",

@@ -1,80 +1,11 @@
-<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-12 pl-20 pr-20 commonStyle float-left contact-section ">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-12 pl-0 pr-0 commonStyle float-left contact-panel textCenter mt-25 mb-25">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-12 pl-0 pr-0 commonStyle float-left contactHeader-section">
-            <h2 class="f-32 mb-20 headingLevel2 ">Get In Touch With Us</h2>
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-12 pl-0 pr-0 commonStyle float-left contactData-section mt-20">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-12 pl-0 pr-20 commonStyle float-left contactLeftData-section">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12 pl-0 pr-0 commonStyle float-left contactLeftMap-section">
-                    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" (mapClick)="mapClicked($event)">
-                        <agm-marker 
-                            *ngFor="let m of markers; let i = index"
-                            (markerClick)="clickedMarker(m.label, i)"
-                            [latitude]="m.lat"
-                            [longitude]="m.lng"
-                            [iconUrl]='{"url": m.label,"scaledSize": {"height": 30, "width": 30}}'
-                            [markerDraggable]="m.draggable"
-                            (dragEnd)="markerDragEnd(m, $event)">
-                          <agm-info-window>
-                            <strong>
-                                    #26,b-block,1st street,kaveri nagar,kottur rural,nellore,A.P
-                            </strong>
-                          </agm-info-window>
-                        </agm-marker>
-                      </agm-map>
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15456.657113597472!2d79.9328117!3d14.4176917!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2389d4041489b6cf!2sTechbrains%20Innovative%20Solutions!5e0!3m2!1sen!2sin!4v1582024267999!5m2!1sen!2sin" class="iframeWidth" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-12 pl-0 pr-0 commonStyle float-left contactRightData-section">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12 pl-0 pr-0 commonStyle float-left contactRightForm-section">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="email"  placeholder="Email Id">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="phoneNo"  placeholder="Phone No">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="message" placeholder="Message">
-                    </div>
-                    <div class="form-group">
-                        <button class="submitBtn" (click)="whatsup()">Submit</button>
-                    </div>
-                    <h5>Contact Us</h5>
-                    <ul class="footer-address-list ftr-details">
-                       <li>
-                        <span>&nbsp;<i class="fas fa-envelope"></i></span>
-                           &nbsp;<span> <a href="mailto:someone@example.com"><span>info@techbrainsinnovative.com</span></a></span>
-                       </li>
-                       <li>
-                       <span>&nbsp; <i class="fas fa-phone-alt"></i></span>&nbsp;<span> <a href="tel:+919967519024">+919967519024</a></span>
-                        
-                       </li>
-                       <li>
-                          <span> &nbsp;&nbsp;<i class="fas fa-map-marker-alt"></i></span>&nbsp;
-                          <address>#26,1st street Kaveri Nagar Road B-Block, Andhra Pradesh 524004</address>
-                       </li>
-                    </ul>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-</div> -->
-<!--Start Enquire Form-->
+<!--Start contact us Form-->
 <section class="contact-page pad-tb">
     <div class="container">
         <div class="row justify-content-center">
-
-
-            <div class="col-lg-5 contact2dv">
-
-                <div class="info-wrapr">
+            <div class="col-lg-5 contact-section">
+                <div class="info-sec">
                     <h3 class="mb-4">Contact us</h3>
-                    <div class="dbox d-flex align-items-start">
+                    <div class="divbox d-flex align-items-start">
                         <div class="icon d-flex align-items-center justify-content-center">
                             <i class="fas fa-map-marker"></i>
                         </div>
@@ -82,7 +13,7 @@
                             <p><span>Address:</span>#26,1st street Kaveri Nagar Road B-Block, Andhra Pradesh,524004</p>
                         </div>
                     </div>
-                    <div class="dbox d-flex align-items-start">
+                    <div class="divbox d-flex align-items-start">
                         <div class="icon d-flex align-items-center justify-content-center">
                             <i class="fas fa-phone-alt"></i>
                         </div>
@@ -90,7 +21,7 @@
                             <p><span>Phone:</span> <a href="tel://+918618309754">+91-8618309754</a></p>
                         </div>
                     </div>
-                    <div class="dbox d-flex align-items-start">
+                    <div class="divbox d-flex align-items-start">
                         <div class="icon d-flex align-items-center justify-content-center">
                             <i class="fas fa-envelope"></i>
                         </div>
@@ -98,7 +29,7 @@
                             <p><span>Email:</span> <a href="mailto:info@techbrainsinnovative.com">info@techbrainsinnovative.com</a></p>
                         </div>
                     </div>
-                    <div class="dbox d-flex align-items-start">
+                    <div class="divbox d-flex align-items-start">
                         <div class="icon d-flex align-items-center justify-content-center">
                             <i class="fa fa-globe"></i>
                         </div>
@@ -116,7 +47,7 @@
                     <h2 class="mt0 mb0">Get in touch</h2>
                     <p class="mb60 mt10">We will catch you as early as we receive the message</p>
                 </div>
-                <div class="form-block">
+                <div class="form-block-section">
                     <form id="contactForm" data-bs-toggle="validator" class="shake">
                         <div class="row">
                             <div class="form-group col-sm-6">
@@ -153,29 +84,22 @@
                             <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" checked="checked">
                             <label class="custom-control-label" for="customCheck">I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of Techbrains Innovative Solutions.</label>
                         </div>
-                        <button type="button" id="form-submit" class="btn lnk btn-main bg-btn" (click)="emailSender()">Submit</button>
-                        <!-- <div id="msgSubmit" class="h3 text-center hidden"></div> -->
-                        <div class="clearfix"></div>
-                        <p class="trm"><i class="fas fa-lock"></i>We hate spam, and we respect your privacy.</p>
+                        <button type="button" id="form-submit" class="btn btn-primary btn-block" (click)="emailSender()">Submit</button>
                     </form>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 </section>
-<!--End Enquire Form-->
+<!--End  contact us Form-->
 
 
 <!--Start Location-->
-<div class="contact-location">
     <div class="container-fluid">
         
         <div class="row justify-content-center">
             <div class="col-lg-12">
-                <div class="map-div">
+                <div class="map-section">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1366.1877533781328!2d79.93257912289963!3d14.417794318237902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2389d4041489b6cf!2sTechbrains%20Innovative%20Solutions%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1657815619539!5m2!1sen!2sin" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
@@ -183,5 +107,4 @@
 
 
     </div>
-</div>
 <!--End Location-->
