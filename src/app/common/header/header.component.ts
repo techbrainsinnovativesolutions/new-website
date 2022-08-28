@@ -23,16 +23,24 @@ export class HeaderComponent implements OnInit {
   openMenu() {
     this.openmenu = !this.openmenu;
   }
-gotoContent(value){
+
+gotoContent(value , platform){
+
 if(value=="About Us"){
   this.commonService.selectedMenuItem=value;
+  if(platform == 'mobile'){
+  this.openMenu();
+  }
   this.window.scrollTo({
     top: 250,
     behavior: 'smooth',
-  })
+  });
 }
 if(value=="Services"){
   this.commonService.selectedMenuItem=value;
+  if(platform == 'mobile'){
+    this.openMenu();
+    }
   this.window.scrollTo({
     top: 700,
     behavior: 'smooth',
@@ -42,6 +50,9 @@ if(value=="Services"){
   
 if(value=="Industries"){
   this.commonService.selectedMenuItem=value;
+  if(platform == 'mobile'){
+    this.openMenu();
+    }
   this.window.scrollTo({
     top: 1380,
     behavior: 'smooth',
@@ -49,6 +60,9 @@ if(value=="Industries"){
 }
 if(value=="Technology"){
   this.commonService.selectedMenuItem=value;
+  if(platform == 'mobile'){
+    this.openMenu();
+    }
   this.window.scrollTo({
     top: 2020,
     behavior: 'smooth',
@@ -56,6 +70,9 @@ if(value=="Technology"){
 }
 if(value=="Team"){
   this.commonService.selectedMenuItem=value;
+  if(platform == 'mobile'){
+    this.openMenu();
+    }
   this.window.scrollTo({
     top: 2580,
     behavior: 'smooth',
@@ -63,6 +80,9 @@ if(value=="Team"){
 }
 if(value=="Contact us"){
   this.commonService.selectedMenuItem=value;
+  if(platform == 'mobile'){
+    this.openMenu();
+    }
   this.window.scrollTo({
     top: 2990,
     behavior: 'smooth',
