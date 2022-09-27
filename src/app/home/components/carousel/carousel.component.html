@@ -8,12 +8,15 @@
 	<ng-template #first>
 		<div class="firstBanner-panel bannerItem">
             <img src="assets/images/software-solution-banner.jpg" class="banner1Img"/>
+			<div>
+				<button> case study</button>
+			</div>
         </div>
 	</ng-template>
 
 	<ng-template #second>
         <div class="secondBanner-panel bannerItem">
-            <img src="assets/images/brand.jpeg" class="banner2Img"/>
+            <img src="assets/images/399.jpg" class="banner2Img"/>
         </div>
 	</ng-template>
 
@@ -25,3 +28,7 @@
 	<ul class="myPoint carouselPoints" NguCarouselPoint>
         <li *ngFor="let j of myCarousel.pointNumbers; let k = index" [class.active]="k==myCarousel.activePoint" (click)="myCarousel.moveTo(k)"></li>
     </ul>
+</ngu-carousel>
+<!-- <div>
+	<img class="img" src="assets/images/399.jpg" alt="app development"/>
+</div> -->
