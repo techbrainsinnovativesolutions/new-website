@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 import {PhpmailerService } from '../../../shared/services/phpmailer.service'
-import { error } from '@angular/compiler/src/util';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',

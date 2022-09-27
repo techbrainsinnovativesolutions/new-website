@@ -144,6 +144,9 @@
           "defaultConfiguration": ""
         }
       }
-    }},
-  "defaultProject": "techBrainsInnovative"
+    }
+  },
+  "cli": {
+    "analytics": "c077bb8e-762f-4889-a336-7a07ea0d5339"
+  }
 }
