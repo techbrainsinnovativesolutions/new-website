@@ -20,7 +20,7 @@ global['Prism'] = null;
 import * as ts from 'typescript';
 
 // Load zone.js for the server.
-import 'zone.js/dist/zone-node';
+import 'zone.js/node';
 import 'reflect-metadata';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
