@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
-
+import {CommonService } from './shared/services/common.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,16 +9,24 @@ import { Meta } from '@angular/platform-browser';
 export class AppComponent implements OnInit{
   title = 'TechBrains Innovative Solutions';
   date = new Date();
+  keywordsArray:any[]= [];
+  keywords:any;
   constructor(
-    private metaTagService: Meta
+    private metaTagService: Meta,private apiservice:CommonService
   ) { }
 
   ngOnInit() {
-    this.metaTagService.addTags([
-      { name: 'keywords', content: 'Javascript,Java, Html5,css3,bootstrap,Angular,Planning,Innovation,Collaboration,Problem solving,web development,website builder,website design,web de, Techbrains Innovative Solutions, Techbrains, Techbrains Innovative ,Inovotive,Software services, software developent,Application development,IOT Devices development' },
+    this.apiservice.getkeywords().subscribe(data=>{
+     data['software_company'].forEach(element => {
+      this.keywordsArray.push(element.Keyword);
+     });
+     this.keywords = this.keywordsArray.toString();
+     this.metaTagService.addTags([
+      { name: 'keywords', content: this.keywords },
       { name: 'robots', content: 'index, follow' },
-      { name: 'author', content: 'Techbrains Innovative Solutions Team' },
+      { name: 'author', content: 'Techbrains Innovative Solutions pvt ltd' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     ]);
+    });
   }
 }

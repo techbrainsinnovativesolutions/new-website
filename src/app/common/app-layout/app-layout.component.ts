@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HostListener, Inject } from '@angular/core'
 import { CommonService } from '../../shared/services/common.service';
 import { WINDOW } from '@ng-toolkit/universal';
+import { Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-app-layout',
   templateUrl: './app-layout.component.html',
@@ -10,6 +11,8 @@ import { WINDOW } from '@ng-toolkit/universal';
 export class AppLayoutComponent implements OnInit {
   // changeHeaderColor:boolean;
   showTopArrow:boolean;
+  keywordsArray:any[]= [];
+  keywords:any;
   @HostListener('window:scroll', ['$event'])
     onWindowScroll($event) {
       if(this.window.scrollY<100){
@@ -42,7 +45,7 @@ export class AppLayoutComponent implements OnInit {
         this.commonService.selectedMenuItem="Contact us";
       }
     }
-  constructor(@Inject(WINDOW) private window: Window, public commonService:CommonService) { }
+  constructor(@Inject(WINDOW) private window: Window, public commonService:CommonService,private metaTagService: Meta) { }
   gotop(){
     this.commonService.selectedMenuItem="";
     this.window.scrollTo({
@@ -51,6 +54,18 @@ export class AppLayoutComponent implements OnInit {
     })
   }
   ngOnInit() {
+    this.commonService.getkeywords().subscribe(data=>{
+      data['software_company'].forEach(element => {
+       this.keywordsArray.push(element.Keyword);
+      });
+      this.keywords = this.keywordsArray.toString();
+      this.metaTagService.addTags([
+       { name: 'keywords', content: this.keywords },
+       { name: 'robots', content: 'index, follow' },
+       { name: 'author', content: 'Techbrains Innovative Solutions pvt ltd' },
+       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+     ]);
+     });
   }
 
 }

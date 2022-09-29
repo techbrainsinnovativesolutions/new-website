@@ -1,16 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { MouseEvent } from '@agm/core';
-import {PhpmailerService } from '../../../shared/services/phpmailer.service'
+import {PhpmailerService } from '../../../shared/services/phpmailer.service';
+import { Meta } from '@angular/platform-browser';
+import {CommonService } from '../../../shared/services/common.service';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
-
-  constructor(private mailService:PhpmailerService) { }
+  keywordsArray:any[]= [];
+  keywords:any;
+  constructor(private mailService:PhpmailerService,private metaTagService: Meta, public apiservice:CommonService) { }
 
   ngOnInit() {
+    this.apiservice.getkeywords().subscribe(data=>{
+      data['software_company'].forEach(element => {
+       this.keywordsArray.push(element.Keyword);
+      });
+      this.keywords = this.keywordsArray.toString();
+      this.metaTagService.addTags([
+       { name: 'keywords', content: this.keywords },
+       { name: 'robots', content: 'index, follow' },
+       { name: 'author', content: 'Techbrains Innovative Solutions pvt ltd' },
+       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+     ]);
+     });
   }
   zoom: number=15;
   
