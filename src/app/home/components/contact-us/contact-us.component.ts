@@ -3,6 +3,11 @@ import { MouseEvent } from '@agm/core';
 import {PhpmailerService } from '../../../shared/services/phpmailer.service';
 import { Meta } from '@angular/platform-browser';
 import {CommonService } from '../../../shared/services/common.service';
+import {
+  AngularFireDatabase,
+  AngularFireList,
+  AngularFireObject,
+} from '@angular/fire/compat/database';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -11,7 +16,12 @@ import {CommonService } from '../../../shared/services/common.service';
 export class ContactUsComponent implements OnInit {
   keywordsArray:any[]= [];
   keywords:any;
-  constructor(private mailService:PhpmailerService,private metaTagService: Meta, public apiservice:CommonService) { }
+  customersList: AngularFireList<any>;
+  customerById: AngularFireObject<any>;
+  constructor(private mailService:PhpmailerService,
+    private metaTagService: Meta,
+    private db: AngularFireDatabase,
+    public apiservice:CommonService) { }
 
   ngOnInit() {
     this.apiservice.getkeywords().subscribe(data=>{

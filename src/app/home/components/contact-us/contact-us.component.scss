@@ -42,13 +42,16 @@ ul {
 
 .contact-section {
   background: #f8f9fa;
-
+   padding:25px;
   .info-sec {
     .divbox {
-      grid-gap: 20px;
+      grid-gap: 5px;
       width: 100%;
       color: #6a6a8e;
       margin-bottom: 25px;
+      .text{
+        margin-top: -5px;
+      }
     }
   }
 
@@ -123,4 +126,17 @@ ul {
 
 .mt-15{
   margin-top:15px;
+}
+.bg-clr{
+  background: linear-gradient(to bottom,#e0f8ff 0,#fff0e5 100%);
+}
+
+.social-icons{
+  text-align: center;
+  a{
+    margin-top:5px;
+    margin-left:20px;
+    border:none;
+    outline: none;
+  }
 }

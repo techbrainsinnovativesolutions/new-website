@@ -31,7 +31,8 @@
               "src/assets/scss/animate.css",
               "src/styles.scss",
               "src/assets/scss/common.scss",
-              "src/assets/scss/mobile.scss"
+              "src/assets/scss/mobile.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [],
             "vendorChunk": true,

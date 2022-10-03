@@ -56,19 +56,19 @@ export class TeamComponent implements OnInit {
     {
       photoPath:'assets/icons/businesswoman.png',
       name:'Lakshmi',
-      designation:'Lead Developer',
+      designation:'Lead Frontend Developer',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
     {
       photoPath:'assets/icons/businessman.png',
       name:'Srikanth',
-      designation:'Chief Marketing Officer',
+      designation:'Cyber security',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     },
     {
       photoPath:'assets/icons/businessman.png',
-      name:'Omsai',
-      designation:'Cheif Security Officer',
+      name:'Sai',
+      designation:'Chief Marketing Manager',
       description:'Lorem ipsum, in graphical and textual context, refers to filler text that is placed in a document or visual presentation.',
     }
     

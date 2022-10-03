@@ -57,4 +57,7 @@ export class CarouselComponent implements OnInit {
     this.myCarousel.moveTo(slide, !this.withAnim);
   }
 
+  getWatsup(){
+    window.open('https://api.whatsapp.com/send?phone=918618309754&source=&data=', "_blank");
+  }
 }

@@ -5,7 +5,6 @@
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, .4);
 }
 .teamDataItemPhoto-panel>img{
     width: 100px;
@@ -38,4 +37,7 @@
 }
 .teamCarouselPoints li.active{
     background: rgba(50, 87, 222, 0.8);
+}
+.bg-clr{
+    background: linear-gradient(to bottom,#e0f8ff 0,#fff0e5 100%);
 }
