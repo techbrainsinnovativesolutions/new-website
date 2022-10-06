@@ -74,26 +74,26 @@
                     <p class="mb60 mt10">We will catch you as early as we receive the message</p>
                 </div>
                 <div class="form-block-section">
-                    <form id="contactForm" data-bs-toggle="validator" class="shake">
+                    <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()" novalidate id="contactForm"  class="shake">
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <input type="text" id="name" placeholder="Enter name" required
-                                    data-error="Please fill Out">
+                                <input type="text" id="name" placeholder="Enter name" formControlName="name"
+                                    >
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-sm-6">
-                                <input type="email" id="email" placeholder="Enter email" required>
+                                <input type="email" id="email" placeholder="Enter email"  formControlName="email">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <input type="text" id="mobile" placeholder="Enter mobile" required
+                                <input type="text" id="mobile" placeholder="Enter mobile"  formControlName="mobileNumber"
                                     data-error="Please fill Out">
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-sm-6">
-                                <select name="Dtype" id="Dtype" required>
+                                <select name="Dtype" id="Dtype" formControlName="requirement">
                                     <option value="">Select Requirement</option>
                                     <option value="web">web application</option>
                                     <option value="mobile">mobile application</option>
@@ -105,7 +105,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+                            <textarea id="message" rows="5" placeholder="Enter your message" formControlName="description"></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="custom-control custom-checkbox">
@@ -116,7 +116,7 @@
                                 Solutions.</label>
                         </div>
                         <button type="button" id="form-submit" class="btn btn-primary btn-block"
-                            (click)="emailSender()">Submit</button>
+                            (click)="submitContactForm()">Submit</button>
                     </form>
                 </div>
             </div>

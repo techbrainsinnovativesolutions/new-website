@@ -4,6 +4,8 @@ import {
   AngularFireList,
   AngularFireObject,
 } from '@angular/fire/compat/database';
+import { Customer } from '../models/customer';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +13,20 @@ export class FirebaseService {
   customersList: AngularFireList<any>;
   customerById: AngularFireObject<any>;
   constructor(private db: AngularFireDatabase) { }
-   
+    // Create customer
+  addCustomer(customer:Customer) {
+    this.customersList = this.db.list('/customers-list');
+    if(customer){
+      this.customersList.push({
+        firstName: customer.name,
+        description: customer.description,
+        email: customer.email,
+        mobileNumber: customer.mobileNumber,
+        requirement:customer.requirement
+      });
+    }
+    
+  }
    // Fetch Single customer Object
    getCustomerById(id: string) {
     return this.db.object('customers-list/' + id);

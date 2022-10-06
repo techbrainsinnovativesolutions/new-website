@@ -23,8 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 // Import below modules for NGX Toastr
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-// import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-// import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -46,6 +45,7 @@ import { ToastrModule } from 'ngx-toastr';
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     ReactiveFormsModule,
+    NgxPaginationModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot() // ToastrModule added
     // provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),

@@ -13,12 +13,16 @@ import { TechnologyExpertiseComponent } from './components/technology-expertise/
 import { TeamComponent } from './components/team/team.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AgmCoreModule } from '@agm/core';
+;
+import { ReactiveFormsModule } from '@angular/forms';
+import { CustomerslistComponent } from './components/customerslist/customerslist.component';
 @NgModule({
-  declarations: [DashboardComponent, CarouselComponent, AboutUsComponent, ServicesComponent, IndustriesComponent, SampleComponent, TechnologyExpertiseComponent, TeamComponent, ContactUsComponent],
+  declarations: [DashboardComponent, CarouselComponent, AboutUsComponent, ServicesComponent, IndustriesComponent, SampleComponent, TechnologyExpertiseComponent, TeamComponent, ContactUsComponent, CustomerslistComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
     NguCarouselModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCFdcs2Hh_Eg2jgjpFZ1jK8EQTxiYKuh00'
     })

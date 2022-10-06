@@ -3,11 +3,16 @@ import { MouseEvent } from '@agm/core';
 import {PhpmailerService } from '../../../shared/services/phpmailer.service';
 import { Meta } from '@angular/platform-browser';
 import {CommonService } from '../../../shared/services/common.service';
+import {FirebaseService } from '../../../shared/services/firebase.service';
+
 import {
   AngularFireDatabase,
   AngularFireList,
   AngularFireObject,
 } from '@angular/fire/compat/database';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -18,12 +23,32 @@ export class ContactUsComponent implements OnInit {
   keywords:any;
   customersList: AngularFireList<any>;
   customerById: AngularFireObject<any>;
+  contactForm:FormGroup;
   constructor(private mailService:PhpmailerService,
     private metaTagService: Meta,
     private db: AngularFireDatabase,
+    public firebaseApi: FirebaseService,
+    public fb: FormBuilder,
+    public toastr: ToastrService,
     public apiservice:CommonService) { }
 
+    contactFormValidators() {
+      this.contactForm = this.fb.group({
+        name: ['', [Validators.required, Validators.minLength(2)]],
+        email: [
+          '',
+          [
+            Validators.required,
+            Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'),
+          ],
+        ],
+        mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+        requirement:['',[Validators.required]],
+        description:['', [Validators.required]]
+      });
+    }
   ngOnInit() {
+    this.contactFormValidators();
     this.apiservice.getkeywords().subscribe(data=>{
       data['software_company'].forEach(element => {
        this.keywordsArray.push(element.Keyword);
@@ -36,6 +61,7 @@ export class ContactUsComponent implements OnInit {
        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
      ]);
      });
+     
   }
   zoom: number=15;
   
@@ -78,6 +104,14 @@ export class ContactUsComponent implements OnInit {
     },error=>{
      console.log(error);
     });
+  }
+
+  submitContactForm(){
+   this.firebaseApi.addCustomer(this.contactForm.value);
+   this.toastr.success(
+    this.contactForm.controls['name'].value + ' successfully added!'
+  );
+   this.contactForm.reset();
   }
 }
 

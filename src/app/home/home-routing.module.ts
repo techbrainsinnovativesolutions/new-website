@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CustomerslistComponent } from './components/customerslist/customerslist.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,9 @@ const routes: Routes = [
         component: DashboardComponent
       }
     ]
+  }, {
+    path: 'customer-list',
+    component: CustomerslistComponent,
   },
 ];
 
