@@ -35,12 +35,7 @@ export class ContactUsComponent implements OnInit {
     contactFormValidators() {
       this.contactForm = this.fb.group({
         name: ['', [Validators.required, Validators.minLength(2)]],
-        email: [
-          '',
-          [
-            Validators.required,
-            Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'),
-          ],
+        email: ['',[Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')],
         ],
         mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
         requirement:['',[Validators.required]],
@@ -48,7 +43,7 @@ export class ContactUsComponent implements OnInit {
       });
     }
   ngOnInit() {
-    this.contactFormValidators();
+   
     this.apiservice.getkeywords().subscribe(data=>{
       data['software_company'].forEach(element => {
        this.keywordsArray.push(element.Keyword);
@@ -61,6 +56,7 @@ export class ContactUsComponent implements OnInit {
        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
      ]);
      });
+     this.contactFormValidators();
      
   }
   zoom: number=15;

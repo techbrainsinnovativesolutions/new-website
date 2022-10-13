@@ -74,23 +74,50 @@
                     <p class="mb60 mt10">We will catch you as early as we receive the message</p>
                 </div>
                 <div class="form-block-section">
-                    <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()" novalidate id="contactForm"  class="shake">
+                    <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()" novalidate>
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <input type="text" id="name" placeholder="Enter name" formControlName="name"
-                                    >
-                                <div class="help-block with-errors"></div>
+                                <input type="text" id="name" placeholder="Enter name" formControlName="name" />
+
+                                <div class="help-block with-errors">
+                                    <!-- errors-->
+                                    <p *ngIf="contactForm.controls.name.touched && contactForm.controls.name.invalid"
+                                        class="error">
+                                        <sup>*</sup>Please enter atleast name
+                                    </p>
+                                    <p *ngIf="contactForm.controls.name.errors?.['minlength']" class="error">
+                                        <sup>*</sup>Name shouldn't be less than 2 words
+                                    </p>
+                                </div>
                             </div>
                             <div class="form-group col-sm-6">
-                                <input type="email" id="email" placeholder="Enter email"  formControlName="email">
-                                <div class="help-block with-errors"></div>
+                                <input type="email" id="email" placeholder="Enter email" formControlName="email" />
+                                <div class="help-block with-errors">
+                                    <!-- errors-->
+                                    <p *ngIf="contactForm.controls.email.touched && contactForm.controls.email.invalid"
+                                        class="error">
+                                        <sup>*</sup>Please provide email.
+                                    </p>
+                                    <p *ngIf="contactForm.controls.email.errors?.['pattern']" class="error">
+                                        <sup>*</sup>Please enter correct email.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <input type="text" id="mobile" placeholder="Enter mobile"  formControlName="mobileNumber"
-                                    data-error="Please fill Out">
-                                <div class="help-block with-errors"></div>
+                                <input type="text" id="mobile" placeholder="Enter mobile"
+                                    formControlName="mobileNumber" />
+                                <div class="help-block with-errors">
+                                    <!-- errors-->
+                                    <p *ngIf="contactForm.controls.mobileNumber.touched && contactForm.controls.mobileNumber.invalid"
+                                        class="error">
+                                        <sup>*</sup>Please provide contact number.
+                                    </p>
+                                    <p *ngIf="contactForm.controls.mobileNumber.errors?.['pattern']" class="error">
+                                        <sup>*</sup>Use numbers only number.
+                                    </p>
+                                </div>
                             </div>
                             <div class="form-group col-sm-6">
                                 <select name="Dtype" id="Dtype" formControlName="requirement">
@@ -101,12 +128,26 @@
                                     <option value="qa">QA</option>
                                     <option value="support">Support</option>
                                 </select>
-                                <div class="help-block with-errors"></div>
+                                <div class="help-block with-errors">
+                                    <!-- errors-->
+                                    <p *ngIf="contactForm.controls.requirement.touched && contactForm.controls.requirement.invalid"
+                                        class="error">
+                                        <sup>*</sup>Please choose your requirement.
+                                    </p>
+
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" rows="5" placeholder="Enter your message" formControlName="description"></textarea>
-                            <div class="help-block with-errors"></div>
+                            <textarea id="message" rows="5" placeholder="Enter your message"
+                                formControlName="description"></textarea>
+                            <div class="help-block with-errors">
+                                <!-- errors-->
+                                <p *ngIf="contactForm.controls.description.touched && contactForm.controls.description.invalid"
+                                    class="error">
+                                    <sup>*</sup>Please write your description.
+                                </p>
+                            </div>
                         </div>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="customCheck" name="example1"
@@ -116,7 +157,7 @@
                                 Solutions.</label>
                         </div>
                         <button type="button" id="form-submit" class="btn btn-primary btn-block"
-                            (click)="submitContactForm()">Submit</button>
+                            [disabled]="!contactForm.valid" (click)="submitContactForm()">Submit</button>
                     </form>
                 </div>
             </div>

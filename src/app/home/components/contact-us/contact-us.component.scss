@@ -140,3 +140,21 @@ ul {
     outline: none;
   }
 }
+
+.error {
+  color: red;
+  margin-top: 5px;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+select.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.btn-primary.disabled,
+.btn-primary:disabled {
+  cursor: not-allowed;
+}
