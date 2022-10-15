@@ -25,5 +25,7 @@ export class AboutUsComponent implements OnInit {
      ]);
      });
   }
-
+  getWatsup(){
+    window.open('https://api.whatsapp.com/send?phone=918618309754&source=&data=', "_blank");
+  }
 }
