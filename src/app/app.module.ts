@@ -24,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     // provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     // provideFirestore(() => getFirestore()),
   ],
-  providers: [{provide: APP_BASE_HREF, useValue: '/'}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
